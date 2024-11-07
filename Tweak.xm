@@ -104,9 +104,9 @@ static void prefsToastChanged() {
         
         SBSApplicationShortcutItem* immortalItem = [[%c(SBSApplicationShortcutItem) alloc] init];
         if (isImmortal) {
-            immortalItem.localizedTitle = [NSString stringWithFormat:@"Disable Immortal Foreground"];
+            immortalItem.localizedTitle = [NSString stringWithFormat:@"禁用「真后台」"];
         } else {
-            immortalItem.localizedTitle = [NSString stringWithFormat:@"Enable Immortal Foreground"];
+            immortalItem.localizedTitle = [NSString stringWithFormat:@"启用「真后台」"];
         }
         immortalItem.type = @"com.sergy.immortalForeground.item";
         immortalItem.bundleIdentifierToLaunch = bundleID;
@@ -130,13 +130,13 @@ static void prefsToastChanged() {
 			if (app.processState != nil)
 				[[%c(FBSSystemService) sharedService] openApplication:bundleID options:nil withResult:nil];
             if (isToastEnabled)
-                [immortalizer showToastWithTitle:[immortalizer getAppNameForBundle:bundleID] subtitle:@"At rest" icon:[UIImage systemImageNamed:@"checkmark.circle.fill"] autoHide:3.0];
+                [immortalizer showToastWithTitle:[immortalizer getAppNameForBundle:bundleID] subtitle:@"已取消" icon:[UIImage systemImageNamed:@"checkmark.circle.fill"] autoHide:3.0];
             
             [immortalBundleIDs removeObject:bundleID];
 			
         } else { 
             if (isToastEnabled)
-                [immortalizer showToastWithTitle:[immortalizer getAppNameForBundle:bundleID] subtitle:@"Immortalized" icon:[UIImage systemImageNamed:@"checkmark.circle.fill"] autoHide:3.0];
+                [immortalizer showToastWithTitle:[immortalizer getAppNameForBundle:bundleID] subtitle:@"真后台" icon:[UIImage systemImageNamed:@"checkmark.circle.fill"] autoHide:3.0];
 			[[%c(FBSSystemService) sharedService] openApplication:bundleID options:nil withResult:nil];
 			dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             	[immortalBundleIDs addObject:bundleID];
@@ -194,7 +194,7 @@ static void prefsToastChanged() {
         NSArray *immortalBundleIDs = [[NSUserDefaults standardUserDefaults] arrayForKey:@"ImmortalForegroundBundleIDs"];
         BOOL isImmortal = [immortalBundleIDs containsObject:self.bundleIdentifier];
         if (isImmortal && isToastEnabled) {
-            [immortalizer showToastWithTitle:[immortalizer getAppNameForBundle:self.bundleIdentifier] subtitle:@"Terminated" icon:[UIImage systemImageNamed:@"exclamationmark.triangle.fill"] autoHide:3.0];
+            [immortalizer showToastWithTitle:[immortalizer getAppNameForBundle:self.bundleIdentifier] subtitle:@"已终止" icon:[UIImage systemImageNamed:@"exclamationmark.triangle.fill"] autoHide:3.0];
         }
     }
 }

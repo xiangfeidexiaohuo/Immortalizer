@@ -1,0 +1,28 @@
+"No respring needed :)"="无需注销设备";
+"Enable"="功能启用";
+"Immortalizer Settings"="插件设置";
+
+"Some apps don't show notifications when it's in the foreground. This option will allow the notifications to show when Immortalizer is enabled on a particular app."="某些应用在前台运行时不会显示通知\n允许在选定应用上启用“真后台”时显示通知";
+"Notifications"="通知";
+"Enable Foreground Notification Per App"="选定应用";
+
+"User"="用户";
+"System"="系统";
+
+"Indicator"="指示器";
+"Immortalizer has 2 indicators:\n⧖ - when an app is both immortalized and is alive\n🟡 - when app is immortalized but got terminated.\nEnabling this overrides SpringBoard's label accessory."="Immortalizer有两种状态指示：\n\n⧖ - 当应用处于“真后台”且活跃时\n🟡 - 当应用处于“真后台”但被终止时\n\n启用此功能将覆盖SpringBoard的标签";
+"Enable Indicator"="启用指示";
+
+"Toast"="弹窗";
+"You can enable/disable toasts that shows the state of the app\nImmortalized - when app is immortalized\nAt rest - when you disable Immortalizer on the app\nTerminated - when app gets terminated while Immortalizer is still enabled."="可以启用/禁用显示应用程序状态的提示窗\n\n真后台：应用开启“真后台”\n已取消：应用禁用“真后台”\n已终止：应用处于“真后台”但被终止";
+"Enable Toast Message"="启用弹窗";
+
+
+
+"Developer"="开发者";
+"Love my tweak? I love coffee :D"="买杯咖啡";
+"Source code :)"="代码开源";
+"Follow me on Twitter!"="关注推特";
+
+"© 2024 Serge Alagon (sergy)"="© 2024 由 Serge Alagon 构建\n🇨🇳刀刀源";
+

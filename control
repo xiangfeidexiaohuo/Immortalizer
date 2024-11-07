@@ -1,10 +1,11 @@
-Package: com.sergy.immortalizer
-Name: Immortalizer
+Package: com.dao.immortalizer
+Name: Immortalizer(rootless)
 Version: 1.0.1
 Architecture: iphoneos-arm
-Description: Foreground your apps even if they are in the background!
-Maintainer: sergy
+Description: 可将应用置于前台，达到「真后台」效果；应用图标长按菜单——开启/禁用「真后台」；根据开源重新编译，且汉化。
+Maintainer: sergy & daodao
 Author: sergy
-Section: Tweaks
-Icon: https://media.havoc.app/672ab6f3a80bcf5e2e0abe8c?w=1920&q=75
+Section: 嗨-工具
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist
+Conflicts: com.sergy.immortalizer
+
